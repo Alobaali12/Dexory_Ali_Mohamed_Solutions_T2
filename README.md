@@ -49,7 +49,7 @@ Follow the prompt to:
 If successful, you’ll see:
 
 ```bash
-✅ Cameras successfully configured!
+Cameras successfully configured!
 ```
 
 ---
