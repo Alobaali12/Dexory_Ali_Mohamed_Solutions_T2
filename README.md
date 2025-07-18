@@ -1,11 +1,11 @@
-# 🤖 Robot Camera Commissioning Tool
+# Robot Camera Commissioning Tool
 
 This project provides a Python-based command-line tool to configure scanning cameras installed on warehouse robots.
 The tool reads a list of serial numbers from a JSON file, asks the user for camera type, and sends a formatted configuration payload to a local test API.
 
 ---
 
-## 📦 Features
+## Features
 
 - Interactive CLI for selecting camera type and loading camera serial numbers
 - Constructs a valid API configuration based on provided camera type
@@ -14,14 +14,14 @@ The tool reads a list of serial numbers from a JSON file, asks the user for came
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 - Python 3.7+
 - Standard libraries only: `json`, `requests`, `http.server`, `unittest`, etc.
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Start the Mock Server
 
@@ -58,7 +58,7 @@ Cameras successfully configured!
 <img width="918" height="548" alt="SS_2" src="https://github.com/user-attachments/assets/d3dfd911-3616-49c0-99ab-a4f33bfa44ba" />
 
 
-## 🧪 Run Unit Tests
+## Run Unit Tests
 
 To validate logic and API structure, use:
 
@@ -87,7 +87,7 @@ OK
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 .
@@ -100,7 +100,7 @@ OK
 
 ---
 
-## 📄 Example JSON Input
+## Example JSON Input
 
 `serial_numbers.json`:
 
@@ -115,7 +115,7 @@ OK
 
 ---
 
-## 📬 API Details
+## API Details
 
 - Method: `PUT`
 - Endpoint: `/api/v1/config/cameras`
@@ -124,7 +124,7 @@ OK
 
 ---
 
-## 🧠 Notes
+## Notes
 
 - Ensure the mock server is running before executing the CLI tool
 - IDs and serial numbers must be unique or the server will reject the request
