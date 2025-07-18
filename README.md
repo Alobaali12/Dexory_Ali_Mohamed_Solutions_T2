@@ -69,9 +69,18 @@ python Unit_Testing.py
 Expected output:
 
 ```bash
-......
+Test build_configuration: PASS
+.Test invalid_format: PASS
+.Test missing_file: PASS
+.Test valid_serials: PASS
+.Error: 400
+Bad request
+Test send_failure: PASS
+.Cameras successfully configured!
+Test send_success: PASS
+.
 ----------------------------------------------------------------------
-Ran 6 tests in 0.01s
+Ran 6 tests in 0.011s
 
 OK
 ```
