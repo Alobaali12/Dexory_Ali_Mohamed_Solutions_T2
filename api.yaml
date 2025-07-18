@@ -1,0 +1,70 @@
+openapi: 3.0.1
+info:
+  title: Robot API
+  description: |
+    ## About this API
+    The robot API is an HTTP API that provides simple methods to control the configuration and operation of a robot.
+  version: "1.0"
+servers:
+  - url: http://localhost:8888/api/v1
+tags:
+  - name: Config
+    description:
+      The config group provides endpoints that allow management of on-robot,
+      persistent configuration data.
+
+paths:
+  /config/cameras:
+    put:
+      tags:
+        - Config
+      summary: Update camera configuration
+      description:
+        Update the current camera configuration. Takes a full list of configured
+        cameras and replaces the existing configuration, validating that the supplied
+        serial numbers are not duplicated.
+      operationId: Update camera configuration
+      requestBody:
+        content:
+          "application/json":
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/CameraConfig"
+        required: true
+      x-codegen-request-body-name: body
+      responses:
+        204:
+          description: No Content
+          content: {}
+
+components:
+  schemas:
+    CameraConfig:
+      required:
+        - ID
+        - Serial
+        - Type
+        - Gain
+      type: object
+      properties:
+        ID:
+          type: string
+          description: The ID of this camera (usually indicating its position).
+          example: A
+        Serial:
+          type: string
+          description: The serial number of this camera.
+          example: DA2352466
+        Type:
+          type: string
+          description: The camera type.
+          enum:
+            - TYPE_A
+            - TYPE_B
+          example: TYPE_A
+        Gain:
+          type: number
+          description: The gain to use for this camera's sensor in dB.
+          default: 20.0
+          example: 20.0
