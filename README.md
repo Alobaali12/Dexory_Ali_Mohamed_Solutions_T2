@@ -54,6 +54,10 @@ If successful, you’ll see:
 
 ---
 
+## Example
+<img width="918" height="548" alt="SS_2" src="https://github.com/user-attachments/assets/d3dfd911-3616-49c0-99ab-a4f33bfa44ba" />
+
+
 ## 🧪 Run Unit Tests
 
 To validate logic and API structure, use:
