@@ -1,3 +1,18 @@
+"""
+Author: Ali Mohamed
+Date: 18/07/2025
+Description:
+    This module contains unit tests for the camera commissioning tool
+    implemented in `Task2_Commision_tool.py`. It verifies the correct
+    behavior of the following functions:
+    
+    - build_configuration: Assembles camera configurations from serials
+    - send_configuration: Sends configuration via HTTP PUT request
+    - get_serial_numbers: Loads serial numbers from a JSON file
+    
+    Mocks are used for HTTP interactions to ensure tests run in isolation.
+"""
+
 import unittest
 from unittest.mock import patch, MagicMock
 import json

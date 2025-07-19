@@ -1,3 +1,13 @@
+"""
+Author: Ali Mohamed
+Date: 18/07/2025
+Description:
+    This script provides a command-line tool to commission scanning cameras 
+    on a robot by configuring them via a local API. It prompts the user for 
+    camera type and the path to a JSON file containing serial numbers, 
+    then constructs a configuration payload and sends it to the API endpoint.
+"""
+
 import json
 import requests
 import os
